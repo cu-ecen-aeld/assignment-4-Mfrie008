@@ -17,7 +17,7 @@ jobs:
                 ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
                 
           - name: Force SSH for GitLab
-  		run: git config --global url."git@gitlab.com:".insteadOf "https://gitlab.com/"
+            run: git config --global url."git@gitlab.com:".insteadOf "https://gitlab.com/"
                 
           - name: Checkout submodules
             run: git submodule update --init --recursive
